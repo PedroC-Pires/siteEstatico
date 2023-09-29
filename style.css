@@ -1,4 +1,7 @@
-.center{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+.centro{
     text-align: center;
     font-family: 'Graduate', serif;
 }
@@ -8,27 +11,30 @@ fieldset{
     width: 300px;
     height: auto;
     border-radius: 12px;
+    color: black;
 }
 
-input{
-    width: 180px;
-    height: 28px;
-    border-radius: 5px;
-    border: none;
-    margin-top: 18px;
-    box-shadow: 2px 2px 8px black;
+.borda1{
+    border: solid 0px black;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 30px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.conteudo{
+    position: relative;
+    top: 200px;
 }
 
 body{
-    background-color: rgb(214, 208, 195);
+    background-image: url(img/background.png);
+    background-size: 100% 400%;
 }
 
-button{
-    width: 80px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    margin-top: 20px;
-    box-shadow: 2px 2px 8px black;
-    margin-bottom: 20px;
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto Condensed', sans-serif, bold 700;
+    filter: invert();
 }
