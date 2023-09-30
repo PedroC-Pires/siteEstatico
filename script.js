@@ -1,35 +1,46 @@
-const campoLogin = document.getElementById("login")
-const campoSenha = document.getElementById("password")
-const campoNovoLogin = document.getElementById("novoLogin")
-const campoNovaSenha = document.getElementById("novaSenha")
-const campoRepSenha = document.getElementById("repSenha")
-let usuarios = []
+const campoLogin = document.getElementById("login");
+const campoSenha = document.getElementById("password");
+const campoNovoLogin = document.getElementById("novoLogin");
+const campoNovaSenha = document.getElementById("novaSenha");
+const campoRepSenha = document.getElementById("repSenha");
+
 
 function login(){
-    let login = campoLogin.value
-    let senha = campoSenha.value
-    let mensagem = "Usuário ou senha incorretos!"
-    for (let usuario of usuarios) {
-        if (usuario.login == login && usuario.senha == senha){
-            mensagem = "Parabéns, você logou!"
-            localStorage.setItem("logado", JSON.stringify(usuario))
-            window.location.href = "./home/home.html"
-            break;
+    let login = campoLogin.value;
+    let senha = campoSenha.value;
+    let mensagem = "Usuário ou senha incorretos!";
+    let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"));
+    if (bancoDeDados == null) {
+        mensagem = "Nenhum usuário cadastrado até o momento.";
+    } else {
+        for (let usuario of bancoDeDados) {
+            if (usuario.login == login && usuario.senha == senha) {
+                mensagem = "Parabéns, você logou!";
+                localStorage.setItem("logado", JSON.stringify(usuario));
+                window.location.href = "./home/home.html";
+                break;
+            }
         }
-        alert(mensagem)
 
     }
+    alert(mensagem);
 }
-
 function register(){
-    if (campoNovaSenha.value == campoRepSenha.value){
+    if (campoNovaSenha.value == campoRepSenha.value) {
         const usuario = {
-            login:campoNovoLogin.value,
-            senha:campoNovaSenha.value
+            login: campoNovoLogin.value,
+            senha: campoNovaSenha.value
+        };
+        let bancoDeDados = JSON.parse(localStorage.getItem("bancoDeDados"));
+        if (bancoDeDados == null) {
+            bancoDeDados = [];
         }
-        usuarios.push(usuario)
-        alert("Registro realizado com sucesso!")
-    } else{
-        alert("As senhas devem ser iguais!")
+        bancoDeDados.push(usuario);
+        localStorage.setItem("bancoDeDados", JSON.stringify(bancoDeDados));
+        alert("Usuário cadastrado com sucesso!")
+         window.location.href = "index.html"
+    } else {
+        alert("As senhas são diferentes!");
     }
+
 }

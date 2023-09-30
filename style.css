@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .centro{
     text-align: center;
@@ -11,14 +10,13 @@ fieldset{
     width: 300px;
     height: auto;
     border-radius: 12px;
-    color: black;
 }
 
 .borda1{
-    border: solid 0px black;
     border-radius: 15px;
     margin-left: 10px;
     margin-right: 10px;
+    padding-top: 20px;
     padding-bottom: 30px;
     height: auto;
     background-color: rgba(0, 0, 0, 0.35);
@@ -31,12 +29,19 @@ fieldset{
 
 body{
     background-image: url(img/background.png);
-    background-size: 100%;
-    background-position: 0px -100px;
+    background-size: 1920px 100vh;
     background-repeat: no-repeat;
+    background-color: #000000;
 }
 
-h1, h2, h3, h4, h5{
-    font-family: 'Roboto Condensed', sans-serif, bold 700;
-    filter: invert();
+div{
+    color: #eee;
+}
+
+.batata:link{
+    color: #eee;
+}
+
+.batata:visited{
+    color: #eee;
 }
