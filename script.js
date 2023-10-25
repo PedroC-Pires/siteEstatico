@@ -3,7 +3,7 @@ const campoSenha = document.getElementById("password");
 const campoNovoLogin = document.getElementById("novoLogin");
 const campoNovaSenha = document.getElementById("novaSenha");
 const campoRepSenha = document.getElementById("repSenha");
-
+let seepasswrd = false
 
 function login(){
     let login = campoLogin.value;
@@ -43,4 +43,15 @@ function register(){
         alert("As senhas são diferentes!");
     }
 
+}
+
+function seepass(){
+    seepasswrd = !seepasswrd
+    if(seepasswrd == false){
+        document.getElementById("novaSenha").type = "password"
+        document.getElementById("repSenha").type = "password"
+    } else{
+        document.getElementById("novaSenha").type = "text"
+        document.getElementById("repSenha").type = "text"
+    }
 }

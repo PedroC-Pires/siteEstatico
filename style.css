@@ -19,7 +19,8 @@ fieldset{
     padding-top: 20px;
     padding-bottom: 30px;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: #ffffff55;
+    box-shadow: 5px 5px 10px #000000aa;
 }
 
 .conteudo{
@@ -27,21 +28,28 @@ fieldset{
     top: 200px;
 }
 
-body{
-    background-image: url(img/background.png);
-    background-size: 1920px 100vh;
-    background-repeat: no-repeat;
-    background-color: #000000;
-}
-
 div{
     color: #eee;
 }
 
-.batata:link{
+a:link{
     color: #eee;
 }
 
-.batata:visited{
+a:visited{
     color: #eee;
+}
+
+#imgseepass{
+    filter: invert();
+}
+
+#imgseepass{
+    filter: invert();
+}
+
+body{
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
