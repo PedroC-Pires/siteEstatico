@@ -15,7 +15,7 @@ function login(){
     } else {
         for (let usuario of bancoDeDados) {
             if (usuario.login == login && usuario.senha == senha) {
-                mensagem = "Parabéns, você logou!";
+                mensagem = "Login realizado com sucesso!";
                 localStorage.setItem("logado", JSON.stringify(usuario));
                 window.location.href = "./home/home.html";
                 break;
@@ -40,7 +40,7 @@ function register(){
         alert("Usuário cadastrado com sucesso!")
          window.location.href = "index.html"
     } else {
-        alert("As senhas são diferentes!");
+        alert("As senhas são diferentes! Por favor , tente novamente.");
     }
 
 }
